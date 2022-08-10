@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "vuepress": "1.8.2",
+    "vuepress": "1.5.0",
     "vuepress-plugin-dynamic-title": "^1.0.0",
     "vuepress-plugin-go-top": "^1.0.4",
     "vuepress-plugin-ribbon-animation": "^1.1.3",
