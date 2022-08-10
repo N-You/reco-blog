@@ -20,8 +20,8 @@ module.exports = {
   ],
   themeConfig: {
     type: "blog",
-    "mode": 'dark',
-    "noFoundPageByTencent": true,
+    mode: 'dark',
+    noFoundPageByTencent: true,
     nav: [
       {
         text: "首页",
