@@ -2,8 +2,8 @@
   "version": "1.0.0",
   "author": "N-you",
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

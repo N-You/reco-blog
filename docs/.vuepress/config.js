@@ -2,7 +2,6 @@ module.exports = {
   title: "N-You",
   theme: "reco",
   description: "知识总结",
-  base: "/docs/",
   locales: {
     "/": {
       lang: "zh-CN",
@@ -138,6 +137,18 @@ module.exports = {
           artist: '张碧晨',
           url: 'https://cdn.jsdelivr.net/gh/fudalijunyi/cdn/MP3/年轮.mp3',
           cover: 'https://cdn.jsdelivr.net/gh/fudalijunyi/picture-bed/img/20200715154924.png'
+        },
+        {
+          name: '我再没见过 像你一般的星空',
+          artist: 'Seto',
+          url: 'https://assets.smallsunnyfox.com/music/2.mp3',
+          cover: 'https://assets.smallsunnyfox.com/music/2.jpg'
+        },
+        {
+          name: '萤火之森',
+          artist: 'CMJ',
+          url: 'https://assets.smallsunnyfox.com/music/3.mp3',
+          cover: 'https://assets.smallsunnyfox.com/music/3.jpg'
         }
       ] ,
       // 自动缩小
