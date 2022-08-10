@@ -11,7 +11,7 @@ heroImageStyle: {
 }
 bgImage: '/hero.jpg'
 bgImageStyle: {
-  height: '450px'
+  Height: '450px',
 }
 isShowTitleInHome: false
 ---

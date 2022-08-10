@@ -1,14 +1,13 @@
-/*
- * @Description:
- * @Date: 2022-06-07 10:05:47
- * @LastEditTime: 2022-06-16 14:54:05
- * @FilePath: \roce-test\docs\.vuepress\config.js
- */
 module.exports = {
   title: "N-You",
   theme: "reco",
   description: "知识总结",
-  dest: "public",
+  base: "/docs/",
+  locales: {
+    "/": {
+      lang: "zh-CN",
+    },
+  },
   head: [
     ["link", { rel: "icon", href: "/avatar.jpg" }],
     [
@@ -18,26 +17,11 @@ module.exports = {
         content: "width=device-width,initial-scale=1,user-scalable=no",
       },
     ],
-    ["link", { rel: "manifest", href: "/manifest.json" }],
-    ["meta", { name: "theme-color", content: "#66ccff" }],
-    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
-    [
-      "meta",
-      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
-    ],
-    ["link", { rel: "apple-touch-icon", href: "/icons/LatteAndCat.png" }],
-    [
-      "link",
-      { rel: "mask-icon", href: "/icons/LatteAndCat.svg", color: "#66ccff" },
-    ],
-    [
-      "meta",
-      { name: "msapplication-TileImage", content: "/icons/LatteAndCat.png" },
-    ],
-    ["meta", { name: "msapplication-TileColor", content: "#000000" }],
   ],
   themeConfig: {
     type: "blog",
+    "mode": 'dark',
+    "noFoundPageByTencent": true,
     nav: [
       {
         text: "首页",
@@ -49,7 +33,7 @@ module.exports = {
         link: "/timeline/",
         icon: "reco-date",
       },
-      { text: 'GitHub', link: 'https://github.com/N-You', icon: 'reco-github' }
+      { text: "GitHub", link: "https://github.com/N-You", icon: "reco-github" },
     ],
     blogConfig: {
       category: {
@@ -132,4 +116,78 @@ module.exports = {
   markdown: {
     lineNumbers: true,
   },
+  plugins: [
+    [
+      "sakura",
+      {
+        num: 50, // 默认数量
+        show: true, //  是否显示
+        zIndex: 9999999, // 层级
+        img: {
+          replace: false, // false 默认图 true 换图 需要填写httpUrl地址
+          httpUrl: "...", // 绝对路径
+        },
+      },
+    ],
+    ["@vuepress-reco/vuepress-plugin-bgm-player",
+    {
+      audios: [
+        // 网络文件示例
+        {
+          name: '年轮',
+          artist: '张碧晨',
+          url: 'https://cdn.jsdelivr.net/gh/fudalijunyi/cdn/MP3/年轮.mp3',
+          cover: 'https://cdn.jsdelivr.net/gh/fudalijunyi/picture-bed/img/20200715154924.png'
+        }
+      ] ,
+      // 自动缩小
+      autoShrink:true ,
+      // 悬浮窗模式，吸边
+      shrinkMode: 'float' ,
+      // 悬浮窗位置
+      floatStyle:{ bottom: '100px', 'z-index': '999999' },
+
+    }],
+    [
+      "ribbon-animation",
+      {
+        size: 90, // 默认数据
+        opacity: 0.3, //  透明度
+        zIndex: -1, //  层级
+        opt: {
+          // 色带HSL饱和度
+          colorSaturation: "80%",
+          // 色带HSL亮度量
+          colorBrightness: "60%",
+          // 带状颜色不透明度
+          colorAlpha: 0.65,
+          // 在HSL颜色空间中循环显示颜色的速度有多快
+          colorCycleSpeed: 6,
+          // 从哪一侧开始Y轴 (top|min, middle|center, bottom|max, random)
+          verticalPosition: "center",
+          // 到达屏幕另一侧的速度有多快
+          horizontalSpeed: 200,
+          // 在任何给定时间，屏幕上会保留多少条带
+          ribbonCount: 2,
+          // 添加笔划以及色带填充颜色
+          strokeSize: 0,
+          // 通过页面滚动上的因子垂直移动色带
+          parallaxAmount: -0.5,
+          // 随着时间的推移，为每个功能区添加动画效果
+          animateSections: true,
+        },
+        ribbonShow: false, //  点击彩带  true显示  false为不显示
+        ribbonAnimationShow: true, // 滑动彩带
+      },
+    ],
+    ["go-top"],
+    [
+      "dynamic-title",
+      {
+        showText: "欢迎回来 O(∩_∩)O~",
+        hideText: "失联中。。。快回来~",
+        recoverTime: 2000,
+      },
+    ],
+  ],
 };
