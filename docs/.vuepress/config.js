@@ -2,7 +2,6 @@ module.exports = {
   title: "N-You",
   theme: "jabinblog",
   dest:'public',
-  base:"/docs/",
   description: "知识总结",
   locales: {
     "/": {
