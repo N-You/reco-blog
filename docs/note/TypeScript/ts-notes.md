@@ -113,15 +113,15 @@ let v:number = a//false
 
 
 
-### 3.函数
+## 函数
 函数定义有两种方式，一种是函数声明，另一种是函数表达式
-#### 函数声明
+### 1.函数声明
 ```TypeScript
 function add(x:number,y:number):number{
   return x+y
 }
 ```
-#### 函数表达式
+### 2.函数表达式
 ```TypeScript
 let add:(x:number,y:number)=>number = function(x:number,y:number):number{
   return x+y
@@ -138,10 +138,7 @@ let add:Add = function(x:number,y:number):number{
   return x+y
 }
 ```
-
-### 函数可选参数和默认值
-
-#### 函数可选参数
+### 3.函数可选参数
 ```TypeScript
 //可选参数可以使用（?）来标识
 function buildName(firstName:string,lastName?:string):string{
@@ -158,8 +155,7 @@ buildName('Bob') // Bob
 //通过使用 ? 来标识一个参数，调用的时候可以不传入该参数，可选参数需要放在必须参数的后面
 
 ```
-
-#### 函数默认值
+### 4.函数默认值
 ```TypeScript
   function buildName(firstName:string='Tom',lastName:string='Cat'):string{
     return firstName+' '+lastName
@@ -171,7 +167,7 @@ buildName('Bob') // Bob
   //默认参数的类型也是可以被推断的
 ```
 
-#### 剩余参数
+### 5.剩余参数
 ```TypeScript
 function push(array,...items:any[]):any[]{
   items.forEach(function(item){
@@ -182,7 +178,7 @@ function push(array,...items:any[]):any[]{
 push([1,2,3],4,5,6) // [1,2,3,4,5,6]
 ```
 
-#### 函数重载
+### 6.函数重载
 函数重载一般拿来解决想用一个函数实现不同的参数传入，通过不同的类型来实现不同的功能,也就是通过参数来判断返回的类型，这样就可以不用重复的定义多个函数了
 ```TypeScript
 let obj:any = {},

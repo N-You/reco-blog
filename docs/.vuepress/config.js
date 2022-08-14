@@ -58,9 +58,7 @@ module.exports = {
         },
       ],
       "/note/TypeScript/": ["ts-notes"],
-      // "interview":[
-  
-      // ]
+      "/interview/":["HTML","DOM-API","CSS"]
     },
     type: "blog",
     blogConfig: {
@@ -97,18 +95,6 @@ module.exports = {
         appKey: 'oxQM5ELPybeLToG0207ym7f6', // your appKey
       }
     }],
-    [
-      "sakura",
-      {
-        num: 50, // 默认数量
-        show: true, //  是否显示
-        zIndex: 9999999, // 层级
-        img: {
-          replace: false, // false 默认图 true 换图 需要填写httpUrl地址
-          httpUrl: "...", // 绝对路径
-        },
-      },
-    ],
     ["@vuepress-reco/vuepress-plugin-bgm-player",
     {
       audios: [
