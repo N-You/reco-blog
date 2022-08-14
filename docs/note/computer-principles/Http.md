@@ -1,10 +1,6 @@
 ---
-title: HTTP笔记
-date: '2022-06-17 17:34:00'
-categories:
- - 笔记
-tags:
- - Http
+title: 基础
+date: 2022-06-17
 ---
 
 # HTTP介绍

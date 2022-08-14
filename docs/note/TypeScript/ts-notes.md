@@ -1,10 +1,6 @@
 ---
 title: ts笔记
-date: '2022-06-13 13:14:00'
-categories:
- - 笔记
-tags:
- - TypeScript
+date: 2022-06-13
 ---
 
 ## 日常类型

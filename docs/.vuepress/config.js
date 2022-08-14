@@ -2,6 +2,7 @@ module.exports = {
   title: "N-You",
   theme: "jabinblog",
   dest:'public',
+  base:"/docs/",
   description: "知识总结",
   locales: {
     "/": {
@@ -19,14 +20,28 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    type: "blog",
     mode: 'dark',
     noFoundPageByTencent: true,
+    logo: "/avatar.jpg",
     nav: [
       {
         text: "首页",
         link: "/",
         icon: "reco-home",
+      },
+      {
+        text:"技术分类",
+        icon:"reco-document",
+        items:[
+          {
+            text:"计算机原理",
+            link:'/note/computer-principles/Http'
+          },
+          {
+            text:"TypeScript",
+            link:'/note/TypeScript/ts-notes'
+          }
+        ]
       },
       {
         text: "时间线",
@@ -35,88 +50,54 @@ module.exports = {
       },
       { text: "GitHub", link: "https://github.com/N-You", icon: "reco-github" },
     ],
+    sidebar: {
+      "/note/computer-principles/": [
+        {
+          title: "计算机原理",
+          collapsable: false,
+          children: ["Http","Http-status"],
+        },
+      ],
+      "/note/TypeScript/": ["ts-notes"],
+      // "interview":[
+  
+      // ]
+    },
+    type: "blog",
     blogConfig: {
-      category: {
-        location: 2,
-        text: "分类",
-      },
       tag: {
         location: 3,
         text: "标签",
-      },
+      }
     },
     friendLink: [
       {
-        title: "N-You的博客",
+        title: "N-You的GitHub",
         desc: "A simple and beautiful vuepress Blog & Doc theme.",
         avatar:
           "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: "https://vuepress-theme-reco.recoluan.com",
+        link: "https://github.com/N-You",
       },
     ],
-    logo: "/avatar.jpg",
     search: true,
     searchMaxSuggestions: 10,
-    // 自动形成侧边导航
-    subSidebar: "auto",
-    sidebarDepth: 1,
-    displayAllHeaders: false,
     lastUpdated: "Last Updated",
     author: "N-You",
     authorAvatar: "/avatar.jpg",
     record: "xxxx",
-    startYear: "2017",
-  },
-  sidebar: {
-    "/note/": [
-      {
-        title: "ComputerPrinciples",
-        collapsable: true,
-        children: ["ComputerPrinciples/Http"],
-      },
-      {
-        title: "DataStructureAlgorithms",
-        collapsable: true,
-      },
-      {
-        title: "CSS",
-        collapsable: true,
-      },
-      {
-        title: "HTML",
-        collapsable: true,
-      },
-      {
-        title: "DOM",
-        collapsable: true,
-      },
-      {
-        title: "JavaScript",
-        collapsable: true,
-      },
-      {
-        title: "TypeScript",
-        collapsable: true,
-        children: ["TypeScript/ts-notes"],
-      },
-      {
-        title: "NodeJS",
-        collapsable: true,
-      },
-      {
-        title: "Vue",
-        collapsable: true,
-      },
-      {
-        title: "React",
-        collapsable: true,
-      },
-    ],
+    startYear: "2022",
   },
   markdown: {
     lineNumbers: true,
   },
   plugins: [
+    ['@vuepress-reco/comments', {
+      solution: 'valine',
+      options: {
+        appId: 'VetQB2qURpeIaJhewzKvjBjT-gzGzoHsz',// your appId
+        appKey: 'oxQM5ELPybeLToG0207ym7f6', // your appKey
+      }
+    }],
     [
       "sakura",
       {
