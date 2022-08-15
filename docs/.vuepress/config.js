@@ -39,6 +39,10 @@ module.exports = {
           {
             text:"TypeScript",
             link:'/note/TypeScript/ts-notes'
+          },
+          {
+            text:"Mock",
+            link:'/note/Mock/mock-msw'
           }
         ]
       },
@@ -58,6 +62,7 @@ module.exports = {
         },
       ],
       "/note/TypeScript/": ["ts-notes"],
+      "/note/Mock/": ["mock-msw"],
       "/interview/":["HTML","DOM-API","CSS"]
     },
     type: "blog",
