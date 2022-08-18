@@ -200,3 +200,39 @@ XSS攻击通过插入脚本来攻击，CSRF利用的是网站对用户浏览器�
 </html>
 
 ```
+
+## 六.简单介绍 requestIdleCallback 及使用场景
+ > requestIdleCallback 是一个异步函数，当页面空闲时执行。
+
+ - 执行重计算而非紧急任务
+ - 空闲回调执行时间应该小于 50ms，最好更少
+ - 空闲回调中不要操作 DOM，因为它本来就是利用的重排重绘后的间隙空闲时间，重新操作 DOM 又会造成重排重绘
+
+ ```js
+const rIC = window["requestIdleCallback"] || ((f) => setTimeout(f, 1));
+ ```
+
+ ## 七.如何计算白屏时间和首屏时间
+ * 白屏时间: window.performance.timing.domLoading - window.performance.timing.navigationStart
+ * 首屏时间: window.performance.timing.domInteractive - window.performace.timing.navigationStart
+
+## 八.什么是重排重绘，如何减少重拍重绘
+ - 重排，也叫回流，元素的位置大小发生变化时，需要重排
+ - 重绘，元素的颜色、内容、样式等发生变化时，需要重绘，没有涉及到大小位置的变化
+
+## 九.什么是 Data URL
+Data URL 是前缀为data:协议的 URL,将图片转换为 base64 直接嵌入到了网页中，使用<img src="data:[MIME type];base64"/>这种方式引用图片，不需要再发请求获取图片。 使用 Data URL 也有一些缺点：
+
+ - base64 编码后的图片会比原来的体积大三分之一左右。
+ - Data URL 形式的图片不会缓存下来，每次访问页面都要被下载一次。可以将 Data URL 写入到 CSS 文件中随着 CSS 被缓存下来。
+
+## 十，HTML 的实体编码
+特殊符号编码，如$nbsp
+
+## 十一.textarea 如何禁止拉伸
+隐藏拉伸按钮
+```CSS
+textarea {
+  resize: none;
+}
+```
