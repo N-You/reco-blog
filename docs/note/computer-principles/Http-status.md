@@ -1,6 +1,8 @@
 ---
 title: 状态码
 date: 2022-06-17
+tags:
+ - Http
 ---
 
 ## HTTP状态码

@@ -37,6 +37,10 @@ module.exports = {
             link:'/note/computer-principles/Http'
           },
           {
+            text:"Vue2.0",
+            link:'/note/Vue2.0/Vue2.0(v-slot)'
+          },
+          {
             text:"TypeScript",
             link:'/note/TypeScript/ts-notes'
           },
@@ -63,7 +67,8 @@ module.exports = {
       ],
       "/note/TypeScript/": ["ts-notes"],
       "/note/Mock/": ["mock-msw"],
-      "/interview/":["HTML","DOM-API","CSS"]
+      "/note/Vue2.0/":["Vue2.0(v-slot)"],
+      "/interview/":["HTML","DOM-API","CSS"],
     },
     type: "blog",
     blogConfig: {

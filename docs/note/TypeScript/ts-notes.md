@@ -1,6 +1,8 @@
 ---
 title: ts笔记
 date: 2022-06-13
+tags:
+ - TypeScript
 ---
 
 ## 日常类型
