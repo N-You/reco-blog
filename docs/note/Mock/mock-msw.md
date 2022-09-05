@@ -1,9 +1,8 @@
 ---
-title: Mock service worker
+title: Mock-service-worker
 date: 2022-08-15
 tags:
  - Mock
- - Mock service worker
 categories:
  - Mock
 ---
