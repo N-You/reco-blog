@@ -68,7 +68,7 @@ module.exports = {
       "/note/TypeScript/": ["ts-notes"],
       "/note/Mock/": ["mock-msw"],
       "/note/Vue2.0/":["Vue2.0(v-slot)","requireCompoent"],
-      "/interview/":["HTML","DOM-API","CSS"],
+      "/interview/":["HTML","DOM-API","CSS",'interview'],
     },
     type: "blog",
     blogConfig: {
