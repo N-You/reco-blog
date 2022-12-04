@@ -88,7 +88,7 @@ module.exports = {
     ],
     search: true,
     searchMaxSuggestions: 10,
-    lastUpdated: "Last Updated",
+    lastUpdated: "最后一次修改",
     author: "N-You",
     authorAvatar: "/avatar.jpg",
     record: "xxxx",
