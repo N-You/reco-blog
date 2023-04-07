@@ -6,7 +6,6 @@ tags:
   - Canvas
 categories: 
   - HTML5
-permalink: /pages/c5589a/
 ---
 
 ## 使用canvas实现图片展示功能

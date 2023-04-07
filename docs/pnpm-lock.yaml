@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@vuepress-reco/vuepress-plugin-bgm-player': ^1.1.4
   vue-class-component: ^7.2.6
-  vue-template-compiler: ^2.7.8
+  vue-template-compiler: ^2.7.14
   vuepress: 1.5.0
   vuepress-plugin-dynamic-title: ^1.0.0
   vuepress-plugin-go-top: ^1.0.4
@@ -5797,6 +5797,21 @@ packages:
         optional: true
     dev: true
 
+  registry.npmmirror.com/follow-redirects/1.15.2_debug@4.3.4:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.15.2.tgz}
+    id: registry.npmmirror.com/follow-redirects/1.15.2
+    name: follow-redirects
+    version: 1.15.2
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: registry.npmmirror.com/debug/4.3.4_supports-color@6.1.0
+    dev: true
+
   registry.npmmirror.com/for-in/1.0.2:
     resolution: {integrity: sha512-7EwmXrOjyL+ChxMhmG5lnW9MPt1aIeZEwKhQzoBUdTV0N3zuwWDZYVJatDvZ2OyzPUvdIAZDsCetk3coyMfcnQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/for-in/-/for-in-1.0.2.tgz}
     name: for-in
@@ -6516,7 +6531,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: registry.npmmirror.com/eventemitter3/4.0.7
-      follow-redirects: registry.npmmirror.com/follow-redirects/1.15.2
+      follow-redirects: registry.npmmirror.com/follow-redirects/1.15.2_debug@4.3.4
       requires-port: registry.npmmirror.com/requires-port/1.0.0
     transitivePeerDependencies:
       - debug
